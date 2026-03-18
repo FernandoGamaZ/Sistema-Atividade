@@ -65,3 +65,15 @@ def mostrar_resultados(resultados):
     for nome, media, status in resultados:
 
         print(nome, "- média:", round(media,2), "-", status)
+
+
+def gerar_relatorio(resultados):
+
+    with open("resultado.txt", "w") as arquivo:
+
+        print("RELATÓRIO DE DESEMPENHO DOS ALUNOS", file=arquivo)
+        print("-"*40, file=arquivo)
+
+        for nome, media, status in resultados:
+
+            print(f"{nome} - Média: {media:.2f} - {status}", file=arquivo)
