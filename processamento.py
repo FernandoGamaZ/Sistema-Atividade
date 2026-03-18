@@ -25,4 +25,8 @@ def validar_notas(alunos):
                 return False
 
     return True
+
+def calcular_media(notas):
+
+    return sum(notas) / len(notas)
     
