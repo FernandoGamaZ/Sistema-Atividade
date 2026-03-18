@@ -13,3 +13,16 @@ def adicionar_aluno_nota():
         alunos.append((aluno , notas))
         return alunos
     
+    
+def validar_notas(alunos):
+
+    for nome, notas in alunos:
+
+        for nota in notas:
+
+            if nota < 0 or nota > 10:
+                print("Nota inválida encontrada!")
+                return False
+
+    return True
+    
