@@ -43,3 +43,25 @@ def verificar_status(media):
         return "Reprovado"
     
 
+def processar_alunos(alunos):
+
+    resultados = []
+
+    for nome, notas in alunos:
+
+        media = calcular_media(notas)
+
+        status = verificar_status(media)
+
+        resultados.append((nome, media, status))
+
+    return resultados
+
+
+def mostrar_resultados(resultados):
+
+    print("\nRESULTADOS\n")
+
+    for nome, media, status in resultados:
+
+        print(nome, "- média:", round(media,2), "-", status)
