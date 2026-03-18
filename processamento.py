@@ -42,3 +42,4 @@ def verificar_status(media):
     else:
         return "Reprovado"
     
+
